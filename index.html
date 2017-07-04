@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<head>
+        <meta charset="utf-8">
+        <title>Lew's JSON Flickr Test</title>
+   
+        <link rel="stylesheet" type="text/css" href="style.css">
+
+    <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+   
+    <script>
+
+    (function() {
+        var flickerAPI = "https://api.flickr.com/services/feeds/photos_public.gne?jsoncallback=?";
+
+        $.getJSON(flickerAPI, {
+
+        tags: "space",
+        tagmode: "all",
+        format: "json"
+        })
+        .done(function(data) {
+
+
+            $.each(data.items, function(i, item) {
+                var $append="";
+                $append = "<div style='height:210px'>";
+                $append += "<tr><td><a href=\"" + item.link + "\" target='_blank'><img src=\"" + item.media.m + "\"/></tr></td></div>";
+                $('#images').append($append);
+
+              }
+
+            );
+          }
+
+        );
+    })();
+
+    (function() {
+        var flickerAPI = "https://api.flickr.com/services/feeds/photos_public.gne?jsoncallback=?";
+
+        $.getJSON(flickerAPI, {
+
+        tags: "space",
+        tagmode: "all",
+        format: "json"
+        })
+        .done(function(data) {
+
+
+            $.each(data.items, function(i, item) {
+                var $append="";
+                $append = "<div style='height:210px'>";
+                $append += "<div class='threelines'><tr><td> <a href=\"" + item.link + "\">" + item.title + "</a></td></tr></div>";
+                $append += "<br /><div style='font-family:sans-serif;font-size:0.7em;text-transform: uppercase;letter-spacing:1px;font-weight:700;text-align:right'><tr><td>BY </div><div class='twolines'><a href=\"" + "https://www.flickr.com/people/" + item.author_id + "\">" + item.author + "</a></td></tr></div>";
+                $append += "<br /><tr><td><div style='font-family:sans-serif;font-size:0.7em;text-transform: uppercase;letter-spacing:1px;font-weight:700;text-align:right'><em>" + item.published + "</em></tr></td></div>";
+                $('#text').append($append);
+
+              }
+
+            );
+          }
+
+        );
+    })();
+
+</script>
+
+</head>
+
+<body>
+   
+    <table>
+        <tbody>
+            <tr>
+                <td><div id="images"></div></td>
+                <td><div id="text"></div></td>
+                </tr>
+        </tbody>
+    </table>   
+       
+
+
+
+</body>
+
+</html>
