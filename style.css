@@ -1,0 +1,76 @@
+img {
+    max-height: 200px;
+    max-width: 400px;
+    float: right;
+    line-height: 1px;
+    border-top-left-radius: 40px;
+}
+
+#images {
+    display: inline-block;
+    height: 200px !important;
+    float: left;
+    vertical-align: top !important;
+    margin-bottom: 0px;
+    border-color: black;
+}
+
+#text {
+    display: inline-block;
+    height: 200px !important;
+    min-width: 400px;
+    vertical-align: top !important;
+    text-align: left;
+    margin-bottom: 0px;
+    margin-left: 20px;
+    border-color: black;
+}
+
+a {
+    color: white;
+    text-decoration: none;
+
+    padding-left: 4px;
+    padding-right: 4px;
+    padding-top: 4px;
+}
+
+.threelines
+     {
+        font-size: 1.5em;
+        background-color: black;
+        font-family: sans-serif;
+        text-transform: uppercase;
+        letter-spacing:2px;
+        font-weight:900;
+        line-height: 1em;
+        height: 3em;
+        overflow: hidden;
+        padding-left: 4px;
+        padding-top: 4px;
+        border-bottom-right-radius: 30px;
+     }
+     .fourlines p
+     {
+       
+        color: white;
+     }
+
+.twolines
+     {
+        font-size: 1em;
+        background-color: black;
+        font-family: sans-serif;
+        text-transform: uppercase;
+        line-height: 1em;
+        height: 2em;
+        overflow: hidden;
+        padding-left: 4px;
+        padding-top: 4px;
+        padding-bottom: 4px;
+     }
+     .twolines p
+     {
+       
+        color: white;
+     }
